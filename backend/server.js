@@ -68,15 +68,17 @@ app.post("/search",(req,res)=>{
 
 app.get("/bike",(req,res)=>{
         res.send({
+            mode:"bike",
             total_distance:Math.round((distance/1000))+" kms",
             fuel_cost:"₹"+Math.round((distance*2.35)/1000),
-            carbon_emissions:Math.round((0.05*distance/1000))+" kg"
+            carbon_emissions:(0.05*distance/1000).toFixed(2)+" kg"
         })
   
 })
 
 app.get("/smallpetrol",(req,res)=>{
     res.send({
+        mode:"small petrol car",
         total_distance:Math.round((distance/1000))+" kms",
         fuel_cost:"₹"+Math.round((distance*4.7)/1000),
         carbon_emissions:Math.round((0.17*distance/1000))+" kg"
@@ -85,6 +87,7 @@ app.get("/smallpetrol",(req,res)=>{
 
 app.get("/mediumpetrol",(req,res)=>{
     res.send({
+        mode:"medium petrol car",
         total_distance:Math.round((distance/1000))+" kms",
         fuel_cost:"₹"+Math.round((distance*7.83)/1000),
         carbon_emissions:Math.round((0.22*distance/1000))+" kg"
@@ -95,6 +98,7 @@ app.get("/mediumpetrol",(req,res)=>{
 
 app.get("/largepetrol",(req,res)=>{
     res.send({
+        mode:"large petrol car",
         total_distance:Math.round((distance/1000))+" kms",
         fuel_cost:"₹"+Math.round((distance*13.42)/1000),
         carbon_emissions:Math.round((0.27*distance/1000))+" kg"
@@ -105,6 +109,7 @@ app.get("/largepetrol",(req,res)=>{
 
 app.get("/averagepetrol",(req,res)=>{
     res.send({
+        mode:"average petrol car",
         total_distance:Math.round((distance/1000))+" kms",
         fuel_cost:"₹"+Math.round((distance*7)/1000),
         carbon_emissions:Math.round((0.20*distance/1000))+" kg"
@@ -116,6 +121,7 @@ app.get("/averagepetrol",(req,res)=>{
 
 app.get("/smalldiesel",(req,res)=>{
     res.send({
+        mode:"small diesel car",
         total_distance:Math.round((distance/1000))+" kms",
         fuel_cost:"₹"+Math.round((distance*5.75)/1000),
         carbon_emissions:Math.round((0.12*distance/1000))+" kg"
@@ -126,6 +132,7 @@ app.get("/smalldiesel",(req,res)=>{
 
 app.get("/averagediesel",(req,res)=>{
     res.send({
+        mode:"average diesel car",
         total_distance:Math.round((distance/1000))+" kms",
         fuel_cost:"₹"+Math.round((distance*7.19)/1000),
         carbon_emissions:Math.round((0.12*distance/1000))+" kg"
@@ -135,6 +142,7 @@ app.get("/averagediesel",(req,res)=>{
 });
 app.get("/largediesel",(req,res)=>{
     res.send({
+        mode:"large diesel car",
         total_distance:Math.round((distance/1000))+" kms",
         fuel_cost:"₹"+Math.round((distance*9.59)/1000),
         carbon_emissions:Math.round((0.14*distance/1000))+" kg"
@@ -145,9 +153,10 @@ app.get("/largediesel",(req,res)=>{
 
 app.get("/evcar",(req,res)=>{
     res.send({
+        mode:"electric car",
         total_distance:Math.round((distance/1000))+" kms",
         charge:"₹"+Math.round((distance*0.72)/1000),
-        carbon_emissions:Math.round((0.033*distance/1000))+" kg"
+        carbon_emissions:(0.033*distance/1000).toFixed(2)+" kg"
     })
 
 
@@ -155,6 +164,7 @@ app.get("/evcar",(req,res)=>{
 
 app.get("/evbike",(req,res)=>{
     res.send({
+        mode:"electric bike",
         total_distance:Math.round((distance/1000))+" kms",
         charge:"₹"+Math.round((distance*0.19)/1000),
         carbon_emissions:Math.round((0.016*distance/1000))+" kg"
@@ -165,6 +175,7 @@ app.get("/evbike",(req,res)=>{
 
 app.get("/bmtc",(req,res)=>{
     res.send({
+        mode:"public transport bmtc",
         total_distance:Math.round((distance/1000))+" kms",
         charge:"₹"+Math.round((distance)/1000),
         carbon_emissions:((0.016*distance/1000).toFixed(2))+" kg"

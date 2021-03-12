@@ -1,0 +1,20 @@
+.navli{
+    display: inline;
+    float:right;
+    margin-top:25px;
+    list-style: none;
+    font-size: 1vw;
+    padding:15px 50px;
+    
+}
+.navli a{
+color:rgb(58, 58, 58);
+font-weight: 600;
+text-decoration: none;
+}
+
+.cta{
+background-color: rgb(79,222,144);
+color: black;
+border-radius: 3px;
+}
