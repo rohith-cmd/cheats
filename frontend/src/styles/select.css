@@ -1,0 +1,14 @@
+.container{
+    position: absolute;
+    margin-top: 18%;
+    margin-left: 15%;
+}
+.choose{
+    position:absolute;
+    margin-top:300px;
+    margin-left:470px;
+}
+.header{
+    font-size: 5em;
+    font-weight: 200;
+}

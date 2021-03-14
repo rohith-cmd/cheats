@@ -1,10 +1,25 @@
+import React from "react"
 import Home from "./pages/HomePage"
-
+import Search from "./pages/search"
+import Select from "./pages/select"
+import Bike from "./pages/Bike"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom"; 
 function App() {
   return (
-    <div className="App">
-      <Home/>
+    <Router>
+      <div className="App">
+        <Switch>
+        <Route path="/" exact component={Home}/>
+        <Route path="/search" exact component ={Search}/>
+        <Route path="/select" exact component={Select}/>
+        <Route path="/bike" exact  component={Bike}/>
+        </Switch>
     </div>
+    </Router>
   );
 }
 
