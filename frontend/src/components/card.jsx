@@ -7,16 +7,17 @@ import axios from "axios"
 const Cards = ()=>{
   const[response,setResponse] = useState('')
   useEffect(()=>{
-    axios.get("http://localhost:5000/bike")
+    axios.get("https://asia-south1-electrek-308100.cloudfunctions.net/app/bike")
     .then(res=>setResponse(res.data))
     .catch(err=>console.log(err))
-})
+},[])
     return(
         <div className="arrange">
        <Container>
   <Row>
     <Col size>
     <Card  style={{ width:'30rem',height:'30rem' }}>
+      
     <Card.Body>
     <Card.Title className="increase-title" >Bike</Card.Title>
     <Card.Text className="increase-body">

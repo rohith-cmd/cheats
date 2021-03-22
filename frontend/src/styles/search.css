@@ -13,3 +13,13 @@
     margin-top:300px;
     margin-left: 400px;
 }
+.form-label{
+	font-size: 30px;
+	padding: 5px;
+}
+.auto{
+	font-size: 19px;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgb(163, 158, 158);
+}

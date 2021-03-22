@@ -20,7 +20,7 @@ const Select = ()=>{
         <Row>
         <Col xs="3">
         <Link to={{
-            pathname:"/bike"
+            pathname:"/bike",
         }}>
         <Button  size="lg" variant="outline-success">Bike</Button>
         </Link>
