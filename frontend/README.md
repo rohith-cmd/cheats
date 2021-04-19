@@ -1,2 +1,2 @@
 # Electerk-hackathon project
-A react Application that calculates the amount of carbon emissions betwwen two locations and suggests the best mode of transportation
+A react Application that calculates the amount of carbon emissions between two locations and suggests the best mode of transportation
